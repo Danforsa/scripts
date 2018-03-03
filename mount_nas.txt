@@ -1,0 +1,8 @@
+if ubuntu cant startup type: 
+`sudo mount -o rw,remount /` (in terminal )
+Then fix the fstab by running `nano /etc/fstab` and comment out any offending entries
+
+To mount nas via fstab:
+
+add the following to `/etc/fstab`:
+//diskstation.local/complete /mnt/nas cifs user={your username},rw,password={your password},domain=DEFAULT_WORKGROUP,vers=1.0
